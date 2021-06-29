@@ -16,7 +16,7 @@ public class MqProducer {
     @Value("${producer.demo.topic}")
     private String testTopic;
 
-    public void test(String msg) {
-        rocketMqProducer.sendMessage(testTopic, msg);
+    public boolean test(String msg) {
+        return rocketMqProducer.sendMessage(testTopic, msg);
     }
 }

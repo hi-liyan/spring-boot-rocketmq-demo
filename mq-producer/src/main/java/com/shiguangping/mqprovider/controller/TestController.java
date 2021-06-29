@@ -19,7 +19,7 @@ public class TestController {
     private MqProducer mqProducer;
 
     @GetMapping("msg")
-    public void test(String msg) {
-        mqProducer.test(msg);
+    public String test(String msg) {
+        return mqProducer.test(msg) ? "Send Success" : "Send Fail";
     }
 }

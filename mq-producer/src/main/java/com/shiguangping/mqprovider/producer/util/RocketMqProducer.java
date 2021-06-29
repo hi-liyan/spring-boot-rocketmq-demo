@@ -18,10 +18,11 @@ public class RocketMqProducer {
     @Autowired
     private RocketMQTemplate rocketMQTemplate;
 
-    public void sendMessage(String topic, String msg) {
+    public boolean sendMessage(String topic, String msg) {
         log.info("mq发送开始，msg：{}", msg);
         SendResult sendResult = rocketMQTemplate.syncSend(topic, msg);
         log.info("mq发送结束：{}", sendResult);
+        return "SEND_OK".equals(sendResult.getSendStatus().name()) ? true : false;
     }
 
 }
