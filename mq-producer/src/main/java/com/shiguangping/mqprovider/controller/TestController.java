@@ -18,8 +18,8 @@ public class TestController {
     @Autowired
     private MqProducer mqProducer;
 
-    @GetMapping("test/{msg}")
-    public void test(@PathVariable("msg") String msg) {
+    @GetMapping("msg")
+    public void test(String msg) {
         mqProducer.test(msg);
     }
 }
