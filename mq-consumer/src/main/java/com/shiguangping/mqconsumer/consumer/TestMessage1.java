@@ -9,13 +9,14 @@ import org.springframework.stereotype.Component;
 
 /**
  * @author liyan
+ * @since 2021-11-09 13:31
  */
 @Slf4j
 @Component
-@RocketMQMessageListener(consumerGroup = "${consumer.demo.group}", topic = "${consumer.demo.topic}", consumeMode = ConsumeMode.CONCURRENTLY, messageModel = MessageModel.CLUSTERING, consumeTimeout = 60000L)
-public class TestMessage implements RocketMQListener<String> {
+@RocketMQMessageListener(consumerGroup = "${consumer.demo.group1}", topic = "${consumer.demo.topic}", consumeMode = ConsumeMode.CONCURRENTLY, messageModel = MessageModel.CLUSTERING, consumeTimeout = 60000L)
+public class TestMessage1 implements RocketMQListener<String> {
     @Override
     public void onMessage(String message) {
-        log.info("1--消息消费成功，@msg：{}", message);
+        log.info("2--消息消费成功，@msg：{}", message);
     }
 }

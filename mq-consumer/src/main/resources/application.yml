@@ -14,4 +14,6 @@ consumer:
   demo:
     topic: rmq-test-topic
     group: rmq-test-group
+    group1: rmq-test-group-1
+
 
