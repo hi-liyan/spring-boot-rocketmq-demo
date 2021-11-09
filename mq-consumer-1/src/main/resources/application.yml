@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: mq-consumer-1
+
+server:
+  port: 8003
+
+rocketmq:
+  name-server: 139.198.19.125:9876
+  consumer:
+    group: mq-consumer-group
+
+consumer:
+  demo:
+    topic: rmq-test-topic
+    group: rmq-test-group-1
