@@ -7,7 +7,7 @@ spring:
 
 rocketmq:
   # namesrv地址
-  name-server: 121.196.189.156:9876
+  name-server: 139.198.19.125:9876
   # 生产者
   producer:
     # 组

@@ -12,14 +12,14 @@ import org.springframework.web.bind.annotation.RestController;
  */
 
 @RestController
-@RequestMapping("test")
+@RequestMapping("/mq")
 public class TestController {
 
     @Autowired
     private MqProducer mqProducer;
 
-    @GetMapping("msg")
-    public String test(String msg) {
+    @GetMapping("/send/{msg}")
+    public String test(@PathVariable("msg") String msg) {
         return mqProducer.test(msg) ? "Send Success" : "Send Fail";
     }
 }
