@@ -24,5 +24,4 @@ public class RocketMqProducer {
         log.info("mq发送结束：{}", sendResult);
         return "SEND_OK".equals(sendResult.getSendStatus().name()) ? true : false;
     }
-
 }
