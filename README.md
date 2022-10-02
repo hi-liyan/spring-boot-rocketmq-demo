@@ -3,13 +3,7 @@
 ## 简介
 
 本文将介绍Spring Boot整合RocketMQ，完成消息生产与消费。  
-博客原文：[RocketMQ 快速开始](https://www.shiguangping.com/spring-boot-rocketmq.html)
-
-<br>
-
-## 仓库
-
-示例代码托管在Gitee：[spring-boot-rocketmq-demo 项目地址](https://gitee.com/ENNRIAAA/spring-boot-rocketmq-demo.git)
+博客地址：[RocketMQ 快速开始](https://www.surcode.cn/docs/middleware/rocketmq-quick-start)
 
 <br>
 
@@ -158,9 +152,9 @@
 
    使用Postman调用`mq-producer`中定义的测试接口，观察消费者是否能监听到生产者发送的消息。
 
-   ![image-20210630001912066](https://images.shiguangping.com/imgs/20210630001912.png)
+   ![image-20210630001912066](https://upyun1.surcode.cn/imgs/20210630001912.png)
 
    消费者收到消息并打印日志。
 
-   ![image-20210630002022328](https://images.shiguangping.com/imgs/20210630002022.png)
+   ![image-20210630002022328](https://upyun1.surcode.cn/imgs/20210630002022.png)
 
